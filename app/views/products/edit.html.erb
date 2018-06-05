@@ -1,0 +1,7 @@
+<h1>Products#edit</h1>
+<p>Find me in app/views/products/edit.html.erb</p>
+<%= form_for @product do |form|%>
+  <%= render partial: "products/form", object: form%>
+
+  <%= form.submit "Submit", data: { confirm:"Edit Product?"}, class: "btn btn-success"%>
+<%end%>

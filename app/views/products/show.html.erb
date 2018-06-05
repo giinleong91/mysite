@@ -1,0 +1,20 @@
+<h1>Products#show</h1>
+
+<div class="product-imageindi">
+Image
+</div>
+
+
+      <div class="product-show">
+            <p>Name: <%= @product.name %></p>
+            <p>Product ID: <%= @product.product_id %></p>
+            <p>Price: RM<%= @product.price %></p>
+            <p>Category: <%= @product.category %></p>
+            <p>Stock Number: <%= @product.stock_number %></p>
+            <p>Description: <%= @product.description %></p>
+
+      <%= link_to "Back", root_path, class: "btn btn-dafault" %>
+      <!-- if user equal admin         -->
+      <%= link_to "Edit", edit_product_path(@product), class: "btn btn-success"%>
+      <%= link_to "Delete", product_path(@product), method: :delete, data: { confirm: "Delete Product?" }, class: "btn btn-default" %>
+      </div>

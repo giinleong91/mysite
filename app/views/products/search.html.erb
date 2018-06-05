@@ -1,0 +1,15 @@
+<table class="product-align">
+  <tbody>
+    <% @product.each do |product|%>
+      <td>
+        <div class="product-image">Image</div> 
+        <br>
+        <%= link_to product.name, product_path(product) %>
+        <ul>
+        <li>RM <%= product.price%></li>
+        <li><%#= product.description%></li>
+        </ul>
+       </td>
+    <%end%>
+  </tbody>
+</table>

@@ -1,0 +1,19 @@
+<p>Name:
+<%= form.text_field :name %>
+</p>
+<p>Product ID:
+<%= form.text_field :product_id %>
+</p>
+<p>Price: RM
+<%= form.text_field :price %>
+</p>  
+ <p>Category:
+<%= form.select :category, options_for_select([["Cloth", "1"], ["Shoes", "2"], ["Bag", "3"]]) %>
+</p>
+<p>Stock Number:
+<%= form.text_field :stock_number %>
+</p>
+<p>Description:</p> 
+ <p>
+<%= form.text_area :description, size:"60x12" %> 
+</p> 

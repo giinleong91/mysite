@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>He & She</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="top-banner">
+    <ul >
+      <li class="home"> <%= link_to "He & She", root_path%> </li>
+      <span class="inner">
+        <li class="search_bar">
+      <div class="search-form">
+      <%= form_tag search_path, id: "search-form" do %>
+        <%= text_field_tag "search", nil, placeholder: "Search" , list: "list" %>
+        <datalist id="list"></datalist>
+      <% end %>
+      </div>
+      </li>
+      <li> <%= link_to "Recommendation", recommendation_path %> </li>
+      <li> <%= link_to "Seasonal", season_path %> </li>
+      <li> <%= link_to "About Us", aboutus_path %> </li>
+      <li> <%= link_to "Contact Us", contactus_path%></li>
+      </span>
+    </ul>
+  </div> 
+    <div class="container">
+      <%= yield %>
+    </div>
+  <footer>
+  <div class="footer">  Find Us in Facebook! </div>
+  </footer>
+  
+</body>
+</html>
